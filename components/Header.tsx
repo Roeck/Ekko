@@ -7,6 +7,8 @@ import { FaUserAlt } from "react-icons/fa";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 
+import Button from "./Button";
+
 interface HeaderProps {
   children: React.ReactNode;
   className?: string;
@@ -21,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
         `
         h-fit 
         bg-gradient-to-b 
-        from-indigo-800 
+        from-emerald-800 
         p-6
         `,
         className
@@ -91,9 +93,29 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
           </button>
         </div>
         <div className="flex justify-between items-center gap-x-4">
+          <div className="flex gap-x-4 items-center">
+            <Button onClick={handleLogout} className="bg-white px-6 py-2">
+              Logout
+            </Button>
+            <Button className="bg-white">
+              <FaUserAlt />
+            </Button>
+          </div>
           <>
-            <div>Sign Up</div>
-            <div>Log In</div>
+            <div>
+              <Button
+                className="
+                    bg-transparent 
+                    text-neutral-300 
+                    font-medium
+                  "
+              >
+                Sign up
+              </Button>
+            </div>
+            <div>
+              <Button className="bg-white px-6 py-2">Log in</Button>
+            </div>
           </>
         </div>
       </div>
