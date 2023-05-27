@@ -13,8 +13,13 @@ interface ListItemProps {
 const ListItem: React.FC<ListItemProps> = ({ image, name, href }) => {
   const router = useRouter();
 
+  const onLick = () => {
+    router.push(href);
+  };
+
   return (
     <button
+      //       onCLick={onClick}
       className="
         relative 
         group 
