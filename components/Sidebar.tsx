@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 import SidebarItem from "./SidebarItem";
 import Box from "./Box";
 import Library from "./Library";
-
 import { useMemo } from "react";
 
 interface SidebarProps {
@@ -37,7 +36,14 @@ const Sidebar = ({ children }: SidebarProps) => {
   );
 
   return (
-    <div>
+    <div
+      className={twMerge(
+        `
+        flex 
+        h-full
+        `
+      )}
+    >
       <div
         className="
           hidden 
@@ -57,9 +63,7 @@ const Sidebar = ({ children }: SidebarProps) => {
             ))}
           </div>
         </Box>
-        <Box className="overflow-y-auto h-full">
-          <Library />
-        </Box>
+        <Box className="overflow-y-auto h-full">Songs</Box>
       </div>
       <main className="h-full flex-1 overflow-y-auto py-2">{children}</main>
     </div>
