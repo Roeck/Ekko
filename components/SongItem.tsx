@@ -3,6 +3,7 @@
 import Image from "next/image";
 
 import { Song } from "@/types";
+import useLoadImage from "@/hooks/useLoadImage";
 
 interface SongItemProps {
   data: Song;
@@ -10,6 +11,8 @@ interface SongItemProps {
 }
 
 const SongItem: React.FC<SongItemProps> = ({ data, onClick }) => {
+  const imagePath = useLoadImage(data);
+
   return (
     <div
       onClick={() => onClick(data.id)}
@@ -42,7 +45,7 @@ const SongItem: React.FC<SongItemProps> = ({ data, onClick }) => {
       >
         <Image
           className="object-cover"
-          //    src={imagePath || "/images/music-placeholder.png"}
+          src={imagePath || "/images/liked.png"}
           fill
           alt="Image"
         />
