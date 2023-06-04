@@ -1,12 +1,14 @@
+import getSongs from "@/actions/getSongs";
 import Header from "@/components/Header";
 import ListItem from "@/components/ListItem";
-import getSongs from "@/actions/getSongs";
+
 import PageContent from "./components/PageContent";
 
 export const revalidate = 0;
 
 export default async function Home() {
   const songs = await getSongs();
+
   return (
     <div
       className="
@@ -27,7 +29,7 @@ export default async function Home() {
               font-semibold
             "
           >
-            Welcome back!
+            Welcome back
           </h1>
           <div
             className="
