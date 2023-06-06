@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 
-// import AccountContent from "./components/AccountContent";
+import AccountContent from "./components/AccountContent";
 
 const Account = () => {
   return (
@@ -21,7 +21,7 @@ const Account = () => {
           </h1>
         </div>
       </Header>
-      {/* <AccountContent /> */}
+      <AccountContent />
     </div>
   );
 };
