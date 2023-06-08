@@ -141,7 +141,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
                     font-medium
                   "
                 >
-                  Sign up
+                  Sign Up
                 </Button>
               </div>
               <div>
@@ -149,7 +149,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
                   onClick={authModal.onOpen}
                   className="bg-white px-6 py-2"
                 >
-                  Log in
+                  Log In
                 </Button>
               </div>
             </>

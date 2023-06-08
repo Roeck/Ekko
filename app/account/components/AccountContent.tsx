@@ -40,7 +40,7 @@ const AccountContent = () => {
         <div className="flex flex-col gap-y-4">
           <p>No active plan.</p>
           <Button onClick={subscribeModal.onOpen} className="w-[300px]">
-            Subscribe
+            <h4>Subscribe (Not available on this demo)</h4>
           </Button>
         </div>
       )}
