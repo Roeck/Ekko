@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 
-import useSubscribeModal from "@/hooks/useSubscribeModal";
+// import useSubscribeModal from "@/hooks/useSubscribeModal";
 import { useUser } from "@/hooks/useUser";
 import { postData } from "@/libs/helpers";
 import { getStripe } from "@/libs/stripeClient";
@@ -27,16 +27,16 @@ const formatPrice = (price: Price) => {
 };
 
 const SubscribeModal: React.FC<SubscribeModalProps> = ({ products }) => {
-  const subscribeModal = useSubscribeModal();
+  // const subscribeModal = useSubscribeModal();
   const { user, isLoading, subscription } = useUser();
 
   const [priceIdLoading, setPriceIdLoading] = useState<string>();
 
-  const onChange = (open: boolean) => {
-    if (!open) {
-      subscribeModal.onClose();
-    }
-  };
+  // const onChange = (open: boolean) => {
+  //   if (!open) {
+  //     subscribeModal.onClose();
+  //   }
+  // };
 
   const handleCheckout = async (price: Price) => {
     setPriceIdLoading(price.id);
@@ -95,14 +95,15 @@ const SubscribeModal: React.FC<SubscribeModalProps> = ({ products }) => {
   }
 
   return (
-    <Modal
-      title="Only for premium users"
-      description="Listen to music with Ekko Premium"
-      isOpen={subscribeModal.isOpen}
-      onChange={onChange}
-    >
-      {content}
-    </Modal>
+    <h4>Subscription not available on this demo</h4>
+    // <Modal
+    //   title="Only for premium users"
+    //   description="Listen to music with Ekko Premium"
+    //   isOpen={subscribeModal.isOpen}
+    //   onChange={onChange}
+    // >
+    //   {content}
+    // </Modal>
   );
 };
 
